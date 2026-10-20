@@ -29,7 +29,7 @@ public class PlayerWalk : MonoBehaviour
         Vector2 input = inputValue.Get<Vector2>();
 
         move = new Vector3(input.x, 0f, input.y);
-        move = Vector3.ClampMagnitude(move, 1f);
+        controller.Move(move * Time.deltaTime * speed);
     }
 
     // Recebe o comando de pulo
@@ -56,20 +56,11 @@ public class PlayerWalk : MonoBehaviour
         verticalVelocity += gravity * Time.deltaTime;
 
         // Movimento horizontal
-        Vector3 horizontalMove = transform.TransformDirection(move);
-
-        // Junta movimento horizontal e vertical
-        Vector3 finalMove = horizontalMove * speed + Vector3.up * verticalVelocity;
-
-        controller.Move(finalMove * Time.deltaTime);
+        controller.Move(new Vector3(0, gravity, 0) * Time.deltaTime);
 
         // Rotaciona o personagem na direcao do movimento
-        if (horizontalMove != Vector3.zero)
-        {
-            Quaternion targetRotation = Quaternion.LookRotation(horizontalMove);
-
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
-        }
+        if (move != Vector3.zero)
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(move), Time.deltaTime * rotationSpeed);
 
         // Animacoes
         anim.SetBool("IsRun", move != Vector3.zero);

@@ -201,6 +201,22 @@ MonoBehaviour:
   m_DefaultActionMap: 
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &35419568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35419562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd89787ce7db7ee46bd98eb80c4183d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerWalk
+  speed: 5
+  jumpForce: 5
+  gravity: -9
+  rotationSpeed: 10
 --- !u!1001 &160521696
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -274,6 +290,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c0da5c0e3ab6a2741be457fe9b604370, type: 3}
       insertIndex: -1
       addedObject: {fileID: 35419563}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c0da5c0e3ab6a2741be457fe9b604370, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 35419568}
   m_SourcePrefab: {fileID: 100100000, guid: c0da5c0e3ab6a2741be457fe9b604370, type: 3}
 --- !u!1 &330585543
 GameObject:
