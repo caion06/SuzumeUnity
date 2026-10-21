@@ -198,7 +198,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: 
+  m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &35419568
@@ -214,8 +214,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWalk
   speed: 5
-  jumpForce: 5
-  gravity: -9
+  jumpForce: 6.5
+  gravity: -10
   rotationSpeed: 10
 --- !u!1001 &160521696
 PrefabInstance:
@@ -615,6 +615,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2592804541004124395, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3046874337027577207, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -653,6 +657,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3046874337027577207, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431374967959989772, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}
+      propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7510268657843531263, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}

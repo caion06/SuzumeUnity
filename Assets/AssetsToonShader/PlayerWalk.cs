@@ -10,6 +10,7 @@ public class PlayerWalk : MonoBehaviour
     // Movimento
     private Vector3 move;
     private float verticalVelocity;
+    private bool jumpRequested;
 
     // Configuracoes
     public float speed = 5f;
@@ -29,7 +30,7 @@ public class PlayerWalk : MonoBehaviour
         Vector2 input = inputValue.Get<Vector2>();
 
         move = new Vector3(input.x, 0f, input.y);
-        controller.Move(move * Time.deltaTime * speed);
+        move = Vector3.ClampMagnitude(move, 1f);
     }
 
     // Recebe o comando de pulo
@@ -38,11 +39,11 @@ public class PlayerWalk : MonoBehaviour
         if (controller.isGrounded)
         {
             verticalVelocity = jumpForce;
-            anim.SetBool("IsJump", true);
+            anim.CrossFade("Jump", 0.1f);
         }
     }
 
-    private void Update()
+private void Update()
     {
         bool grounded = controller.isGrounded;
 
@@ -52,22 +53,23 @@ public class PlayerWalk : MonoBehaviour
             verticalVelocity = -2f;
         }
 
-        // Aplica a gravidade
         verticalVelocity += gravity * Time.deltaTime;
 
-        // Movimento horizontal
-        controller.Move(new Vector3(0, gravity, 0) * Time.deltaTime);
+        // Combina movimento horizontal e vertical
+        Vector3 velocity = move * speed;
+        velocity.y = verticalVelocity;
 
-        // Rotaciona o personagem na direcao do movimento
-        if (move != Vector3.zero)
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(move), Time.deltaTime * rotationSpeed);
+        controller.Move(velocity * Time.deltaTime);
+
+        // Rotaciona na direcao do movimento
+        if (move.sqrMagnitude > 0.01f)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(move);
+
+            transform.rotation = Quaternion.Slerp(transform.rotation,targetRotation,rotationSpeed * Time.deltaTime);
+        }
 
         // Animacoes
-        anim.SetBool("IsRun", move != Vector3.zero);
-
-        if (controller.isGrounded && verticalVelocity <= 0f)
-        {
-            anim.SetBool("IsJump", false);
-        }
+        anim.SetBool("IsRun", move.sqrMagnitude > 0.01f);
     }
 }
