@@ -13,12 +13,10 @@ public class PlayerController : MonoBehaviour
     private bool jumpRequested;
 
     [Header("Configurações")]
-    [Tooltip("Variaveis de movimentação e gravidade.")]
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpForce = 5f;
     [SerializeField] private float gravity = -20f;
     [SerializeField] private float rotationSpeed = 5f;
-    
 
     // Metodos MonoBehaviour
     private void Start()
