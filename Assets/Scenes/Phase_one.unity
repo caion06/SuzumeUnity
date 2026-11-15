@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd89787ce7db7ee46bd98eb80c4183d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerWalk
-  speed: 5
+  speed: 6
   jumpForce: 6.5
   gravity: -10
   rotationSpeed: 10
@@ -481,7 +481,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c0da5c0e3ab6a2741be457fe9b604370, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 49.96
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0da5c0e3ab6a2741be457fe9b604370, type: 3}
       propertyPath: m_LocalPosition.y
@@ -489,7 +489,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0da5c0e3ab6a2741be457fe9b604370, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 9.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0da5c0e3ab6a2741be457fe9b604370, type: 3}
       propertyPath: m_LocalRotation.w
@@ -3779,7 +3779,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4464358917946780532, guid: cf9c7e1363995e54f9d71c4e4ad978c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1
+      value: 0.48
       objectReference: {fileID: 0}
     - target: {fileID: 4464358917946780532, guid: cf9c7e1363995e54f9d71c4e4ad978c1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3952,7 +3952,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2592804541004124395, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}
       propertyPath: playOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2592804541004124395, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}
       propertyPath: ShapeModule.m_Scale.x
@@ -3965,6 +3965,14 @@ PrefabInstance:
     - target: {fileID: 2592804541004124395, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}
       propertyPath: VelocityModule.y.minScalar
       value: -109.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592804541004124395, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 1692
+      objectReference: {fileID: 0}
+    - target: {fileID: 2592804541004124395, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3046874337027577207, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4008,7 +4016,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4431374967959989772, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}
       propertyPath: playOnAwake
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7510268657843531263, guid: 7c6c4845e3fb04249a6b22509f1c8339, type: 3}
       propertyPath: m_Name
@@ -8225,7 +8233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4464358917946780532, guid: cf9c7e1363995e54f9d71c4e4ad978c1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 4464358917946780532, guid: cf9c7e1363995e54f9d71c4e4ad978c1, type: 3}
       propertyPath: m_LocalPosition.z

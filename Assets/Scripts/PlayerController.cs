@@ -52,6 +52,9 @@ public class PlayerController : MonoBehaviour
             verticalVelocity = jumpForce;
             anim.CrossFade("Jump", 0.1f);
         }
+        else {
+            anim.Play("Idle");
+        }
     }
 
     // Metodos encapsulados
