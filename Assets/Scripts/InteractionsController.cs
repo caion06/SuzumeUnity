@@ -20,21 +20,6 @@ public class InteractionsController : MonoBehaviour
         configuracoes.SetActive(false);
     }
 
-    public void Shine25()
-    {
-        Screen.brightness = 0.5f;
-    }
-
-    public void Shine50()
-    {
-        Screen.brightness = 0.25f;
-    }
-
-    public void Shine100()
-    {
-        Screen.brightness = 1.0f;
-    }
-
     public void ExitGame()
     {
         #if UNITY_EDITOR

@@ -3046,8 +3046,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1331692264}
-        m_TargetAssemblyTypeName: InteractionsController, Assembly-CSharp
+      - m_Target: {fileID: 999111391}
+        m_TargetAssemblyTypeName: ShineController, Assembly-CSharp
         m_MethodName: Shine50
         m_Mode: 1
         m_Arguments:
@@ -4748,6 +4748,7 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 59443936}
   m_SourcePrefab: {fileID: 100100000, guid: 34d72fa318d0ac44fb505f98bb8d326a, type: 3}
+<<<<<<< HEAD
 --- !u!1001 &974389126
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4811,6 +4812,9 @@ Transform:
   m_PrefabInstance: {fileID: 974389126}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1025619984
+=======
+--- !u!1 &999111386
+>>>>>>> cd20315b8e59bb29152f6e3fc375f71ac8ac3e8d
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4818,20 +4822,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD
   - component: {fileID: 1025619985}
   m_Layer: 0
   m_Name: Cabanas
+=======
+  - component: {fileID: 999111390}
+  - component: {fileID: 999111389}
+  - component: {fileID: 999111388}
+  - component: {fileID: 999111387}
+  - component: {fileID: 999111391}
+  m_Layer: 5
+  m_Name: CanvasShine
+>>>>>>> cd20315b8e59bb29152f6e3fc375f71ac8ac3e8d
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD
 --- !u!4 &1025619985
 Transform:
+=======
+--- !u!114 &999111387
+MonoBehaviour:
+>>>>>>> cd20315b8e59bb29152f6e3fc375f71ac8ac3e8d
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1025619984}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -4928,10 +4948,92 @@ Transform:
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &1027732570
 MeshCollider:
+=======
+  m_GameObject: {fileID: 999111386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &999111388
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999111386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &999111389
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999111386}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 100
+  m_TargetDisplay: 0
+--- !u!224 &999111390
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999111386}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1706287366}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &999111391
+MonoBehaviour:
+>>>>>>> cd20315b8e59bb29152f6e3fc375f71ac8ac3e8d
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 457493430}
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -4975,6 +5077,15 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+=======
+  m_GameObject: {fileID: 999111386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64eac13a5d09559499328f36cd52c05f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShineController
+  backgroundShine: {fileID: 1706287367}
+>>>>>>> cd20315b8e59bb29152f6e3fc375f71ac8ac3e8d
 --- !u!1 &1030877720
 GameObject:
   m_ObjectHideFlags: 0
@@ -6983,6 +7094,7 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1689032047}
   m_Mesh: {fileID: 530371551675147985, guid: 34d72fa318d0ac44fb505f98bb8d326a, type: 3}
+<<<<<<< HEAD
 --- !u!1 &1706177685 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -636889562680718736, guid: 34d72fa318d0ac44fb505f98bb8d326a, type: 3}
@@ -6990,10 +7102,15 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!64 &1706177689
 MeshCollider:
+=======
+--- !u!1 &1706287365
+GameObject:
+>>>>>>> cd20315b8e59bb29152f6e3fc375f71ac8ac3e8d
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   m_GameObject: {fileID: 1706177685}
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -7316,10 +7433,76 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: cf9c7e1363995e54f9d71c4e4ad978c1, type: 3}
 --- !u!1 &1737591709
 GameObject:
+=======
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1706287366}
+  - component: {fileID: 1706287368}
+  - component: {fileID: 1706287367}
+  m_Layer: 5
+  m_Name: background shine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1706287366
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706287365}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 999111390}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1706287367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706287365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1706287368
+CanvasRenderer:
+>>>>>>> cd20315b8e59bb29152f6e3fc375f71ac8ac3e8d
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1737591710}
@@ -7438,6 +7621,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 780206259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_GameObject: {fileID: 1706287365}
+  m_CullTransparentMesh: 1
+>>>>>>> cd20315b8e59bb29152f6e3fc375f71ac8ac3e8d
 --- !u!1 &1766970080
 GameObject:
   m_ObjectHideFlags: 0
@@ -7520,8 +7707,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1331692264}
-        m_TargetAssemblyTypeName: InteractionsController, Assembly-CSharp
+      - m_Target: {fileID: 999111391}
+        m_TargetAssemblyTypeName: ShineController, Assembly-CSharp
         m_MethodName: Shine100
         m_Mode: 1
         m_Arguments:
@@ -8441,8 +8628,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1331692264}
-        m_TargetAssemblyTypeName: InteractionsController, Assembly-CSharp
+      - m_Target: {fileID: 999111391}
+        m_TargetAssemblyTypeName: ShineController, Assembly-CSharp
         m_MethodName: Shine25
         m_Mode: 1
         m_Arguments:
@@ -9508,6 +9695,7 @@ SceneRoots:
   - {fileID: 160521696}
   - {fileID: 919639473}
   - {fileID: 610516467}
+  - {fileID: 999111390}
   - {fileID: 544018130}
   - {fileID: 823142511}
   - {fileID: 953180490}
