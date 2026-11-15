@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.VFX;
 
 public class Collectibles : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class Collectibles : MonoBehaviour
     [SerializeField] private int maxMemories;
     [SerializeField] private string tagKeys;
     [SerializeField] private string tagMemories;
+
+    [SerializeField] private VisualEffect smoke;
 
     // Metodos de colição
     private void OnTriggerEnter(Collider other)
@@ -21,6 +24,7 @@ public class Collectibles : MonoBehaviour
 
             if (maxKeys == keys)
             {
+                smoke.SendEvent("OnPlay");
                 //funcinalidade a se aplicada
             }
         }
