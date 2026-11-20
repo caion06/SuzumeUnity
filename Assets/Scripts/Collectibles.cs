@@ -27,7 +27,7 @@ public class Collectibles : MonoBehaviour
         if (other.CompareTag(tagKeys))
         {
             keys++;
-            textMesh.text = $"Chaves: {keys}/5";
+            textMesh.text = $"Chaves: {keys}/10";
 
             if (maxKeys == keys)
             {
@@ -45,8 +45,6 @@ public class Collectibles : MonoBehaviour
             {
                 textMesh.text = "Vá para a porta!";
             }
-            // Destroi o obijeto que ele coletar
-            Destroy(other.gameObject);
         }
         else if (other.gameObject.CompareTag(tagPorta))
         {
@@ -57,15 +55,15 @@ public class Collectibles : MonoBehaviour
 
             if (maxMemories == memories)
             {
-                Instantiate(videoPlayer);
+                videoPlayer.SetActive(true);
             }
-            // Destroi o obijeto que ele coletar
-            Destroy(other.gameObject);
         }
-        if (other.gameObject.CompareTag("Finish")) 
+        if (other.gameObject.CompareTag("Finish"))
         {
-            transform.position = new Vector3(-3.5f, -1.5f, 0f);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        // Destroi o obijeto que ele coletar
+        Destroy(other.gameObject);
     }
 
     private void OnTriggerExit(Collider other)

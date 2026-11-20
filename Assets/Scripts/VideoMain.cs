@@ -6,8 +6,8 @@ public class VideoMain : MonoBehaviour
 {
     private VideoPlayer videoPlayer;
     [SerializeField]private GameObject fhater;
-    [SerializeField] private VideoClip clip2;
     [SerializeField] private AudioSource audioSource;
+    public bool qualquer;
 
     private void Start()
     {
@@ -15,16 +15,16 @@ public class VideoMain : MonoBehaviour
         videoPlayer.loopPointReached += endVideo;
 
         audioSource.Stop();
-
-        if(SceneManager.GetActiveScene().name == "Phase_two")
-        {
-            videoPlayer.clip = clip2;
-        }
     }
 
     private void endVideo(VideoPlayer vp)
     {
         audioSource.Play();
         Destroy(fhater);
+
+        if (SceneManager.GetActiveScene().name == "Phase_two")
+        {
+            SceneManager.LoadScene(0);
+        }
     }
 }

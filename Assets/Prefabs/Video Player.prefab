@@ -158,7 +158,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4297932962828377551}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: ae78477c792324e4db82717d6184a603, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 55e0fe8331013894eb0b15916a6432f1, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -199,5 +199,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VideoMain
   fhater: {fileID: 33179341916289847}
-  clip2: {fileID: 0}
   audioSource: {fileID: 0}
