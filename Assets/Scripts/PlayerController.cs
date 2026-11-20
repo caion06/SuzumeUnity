@@ -33,6 +33,11 @@ public class PlayerController : MonoBehaviour
 
         // Animacoes
         anim.SetBool("IsRun", move.sqrMagnitude > 0.01f);
+
+        if(transform.position.y <= -14f)
+        {
+            transform.position = new Vector3(-3.5f, -1.5f, 0f);
+        }
     }
 
     // Metodos Player Input

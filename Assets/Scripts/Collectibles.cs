@@ -13,6 +13,7 @@ public class Collectibles : MonoBehaviour
     [SerializeField] private string tagKeys;
     [SerializeField] private string tagMemories;
     [SerializeField] private string tagPorta;
+    [SerializeField] private string tagReiniciar;
     [SerializeField] private TextMeshProUGUI textMesh;
     [SerializeField] private GameObject videoPlayer;
 
@@ -44,15 +45,10 @@ public class Collectibles : MonoBehaviour
             {
                 textMesh.text = "Vá para a porta!";
             }
+            // Destroi o obijeto que ele coletar
+            Destroy(other.gameObject);
         }
-
-        // Destroi o obijeto que ele coletar
-        Destroy(other.gameObject);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag(tagPorta))
+        else if (other.gameObject.CompareTag(tagPorta))
         {
             if (maxKeys == keys)
             {
@@ -63,6 +59,17 @@ public class Collectibles : MonoBehaviour
             {
                 Instantiate(videoPlayer);
             }
+            // Destroi o obijeto que ele coletar
+            Destroy(other.gameObject);
         }
+        if (other.gameObject.CompareTag("Finish")) 
+        {
+            transform.position = new Vector3(-3.5f, -1.5f, 0f);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        
     }
 }
