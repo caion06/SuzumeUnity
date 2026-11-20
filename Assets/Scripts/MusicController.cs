@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicController : MonoBehaviour
 {
@@ -11,6 +12,14 @@ public class MusicController : MonoBehaviour
     private void Awake()
     {
         audioSource.time = dataMusic.musicTime;
+    }
+
+    private void Start()
+    {
+        if (SceneManager.GetActiveScene().name == "Phase_two")
+        {
+            audioSource.clip = musicas[1];
+        }
     }
 
     private void Update()

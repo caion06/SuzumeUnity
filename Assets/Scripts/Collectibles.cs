@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.VFX;
 
 public class Collectibles : MonoBehaviour
@@ -10,6 +12,9 @@ public class Collectibles : MonoBehaviour
     [SerializeField] private int maxMemories;
     [SerializeField] private string tagKeys;
     [SerializeField] private string tagMemories;
+    [SerializeField] private string tagPorta;
+    [SerializeField] private TextMeshProUGUI textMesh;
+    [SerializeField] private GameObject videoPlayer;
 
     [SerializeField] private VisualEffect smoke;
 
@@ -21,20 +26,23 @@ public class Collectibles : MonoBehaviour
         if (other.CompareTag(tagKeys))
         {
             keys++;
+            textMesh.text = $"Chaves: {keys}/5";
 
             if (maxKeys == keys)
             {
                 smoke.SendEvent("OnPlay");
-                //funcinalidade a se aplicada
+                textMesh.text = "Vá para a porta!";
             }
         }
         // A mesma coisa da chave só que com as memorias
         else if (other.CompareTag(tagMemories))
         {
             memories++;
+            textMesh.text = $"Memorias: {memories}/5";
+
             if (maxMemories == memories)
             {
-                //funcinalidade a se aplicada
+                textMesh.text = "Vá para a porta!";
             }
         }
 
@@ -44,6 +52,17 @@ public class Collectibles : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        //funcinalidade a se aplicada
+        if (other.gameObject.CompareTag(tagPorta))
+        {
+            if (maxKeys == keys)
+            {
+                SceneManager.LoadScene(2);
+            }
+
+            if (maxMemories == memories)
+            {
+                Instantiate(videoPlayer);
+            }
+        }
     }
 }
