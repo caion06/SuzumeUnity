@@ -2,16 +2,16 @@ using UnityEngine;
 
 public class Cam : MonoBehaviour
 {
-    //Camera
-    public Transform player; // Arraste seu jogador aqui no Inspector
-    public Vector3 offset = new Vector3(0, 5, -10); // Dist?ncia da c?mera para o jogador
-    public float smoothSpeed = 0.125f; // Velocidade de suaviza??o
+    public Transform player; // Transform do jogador que será seguido
+    public Vector3 offset = new Vector3(0, 5, -10); // Distância padrão entre a câmera e o jogador
+    public float smoothSpeed = 0.125f; // Fator de suavização (quanto menor, mais suave o atraso)
+    
     void LateUpdate()
     {
-        Vector3 desiredPosition = player.position + offset;
-        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed);
-        transform.position = smoothedPosition;
+        Vector3 desiredPosition = player.position + offset; // Calcula a posição alvo ideal
+        Vector3 smoothedPosition = Vector3.Lerp(transform.position, desiredPosition, smoothSpeed); // Interpola suavemente da posição atual até o alvo
+        transform.position = smoothedPosition; // Atualiza a posição da câmera
 
-        transform.LookAt(player); // Faz a c?mera olhar sempre para o jogador
+        transform.LookAt(player); // Mantém a câmera sempre rotacionada na direção do jogador
     }
 }

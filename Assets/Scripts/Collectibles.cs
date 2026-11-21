@@ -5,6 +5,7 @@ using UnityEngine.VFX;
 
 public class Collectibles : MonoBehaviour
 {
+    // Contadores, tags de identificação e referências de UI/efeitos configuráveis no Inspector
     [Header("Coletaveis")]
     [SerializeField] private int keys;
     [SerializeField] private int memories;
@@ -19,11 +20,10 @@ public class Collectibles : MonoBehaviour
 
     [SerializeField] private VisualEffect smoke;
 
-    // Metodos de colição
+    // Disparado automaticamente ao entrar em um colisor marcado como Trigger
     private void OnTriggerEnter(Collider other)
     {
-        // Verifica se o jogador colidio com a chave e se sim adiciona mas
-        // um a quantidade de chaves e verifica se já chegou ao maximo
+        // Coleta de chave: incrementa a contagem, atualiza a UI e ativa a fumaça ao atingir o máximo
         if (other.CompareTag(tagKeys))
         {
             keys++;
@@ -35,7 +35,7 @@ public class Collectibles : MonoBehaviour
                 textMesh.text = "Vá para a porta!";
             }
         }
-        // A mesma coisa da chave só que com as memorias
+        // Coleta de memória: incrementa a contagem, atualiza a UI e avisa ao atingir o máximo
         else if (other.CompareTag(tagMemories))
         {
             memories++;
@@ -46,6 +46,7 @@ public class Collectibles : MonoBehaviour
                 textMesh.text = "Vá para a porta!";
             }
         }
+        // Interação com a porta: avança de cena (chaves completas) ou ativa o vídeo (memórias completas)
         else if (other.gameObject.CompareTag(tagPorta))
         {
             if (maxKeys == keys)
@@ -58,16 +59,12 @@ public class Collectibles : MonoBehaviour
                 videoPlayer.SetActive(true);
             }
         }
+        // Reinicia a fase atual ao colidir com um objeto marcado como "Finish"
         if (other.gameObject.CompareTag("Finish"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-        // Destroi o obijeto que ele coletar
+        // Remove o objeto colidido da cena
         Destroy(other.gameObject);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        
     }
 }
